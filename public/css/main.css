@@ -1,0 +1,182 @@
+* {
+  border: 1px solid red;
+}
+
+html {
+  background: #eee;
+}
+
+p, div, html, body {
+  font-family: 'Oswald', sans-serif;
+}
+
+body {
+  background-image: url('../img/tile-paper.jpg');
+}
+
+.navbar {
+  height: 200px;
+}
+
+.nav-container {
+  width: 440px;
+}
+
+.nav-menu-item {
+  font-family: 'Oswald', sans-serif;
+  font-size: 15px;
+  font-weight: bold;
+  text-transform: uppercase;
+  color: rgb(255, 114, 86);
+  letter-spacing: 3px;
+}
+
+.header-img {
+  width: 250px;
+  height: 85px;
+  
+}
+
+.unpadded {
+  padding: 0;
+}
+
+.nomargin {
+  margin: 0;
+}
+
+.fullwidth {
+  width: 100%;
+}
+
+.main-img {
+  width: 100%;
+  height: auto;
+}
+
+.break-area {
+  margin-top: 15px;
+  height: 50px;
+}
+
+.zigzag-break {
+  background-image: url('../img/tile-white-zig-zag.png');
+  background-repeat: repeat-x;
+  width: 100%;
+  height: 33px;
+}
+
+.red-break {
+  background-image: url('../img/red-bg.jpg');
+  width: 100%;
+  height: 180px;
+}
+
+.centered {
+  display: block;
+  margin: 0 auto;
+}
+
+.whats-new-holder {
+  width: 309px;
+  margin-top: 40px;
+}
+
+.quickview-container {
+  width: 974px;
+  height: 400px;
+  padding: 0;
+  margin: 45px auto;
+}
+
+.quickview-img-container {
+  width: 600px;
+  height: 400px;
+  display: block;
+  position: absolute;
+  margin: 0;
+}
+
+.quickview-img {
+  width: 100%;
+  height: 100%;
+}
+
+.quickview-text-container {
+  display: block;
+  top: 32px;
+  width: 477px;
+  height: 335px;
+  padding: 25px 45px;
+  background: #fff;
+  z-index: 1990;
+  position: relative;
+}
+
+.quickview-right-text {
+  left: 495px;
+}
+
+.quickview-right-image {
+  left: 520px;
+}
+
+
+.quickview-text-date {
+  font-family: 'Oswald', sans-serif;
+  font-size: 12px;
+  font-weight: bold;
+  color: #847777;
+  margin: 15px 0 0 0;
+}
+
+.quickview-text-title {
+  font-family: 'Oswald', sans-serif;
+  font-size: 18px;
+  font-weight: bold;
+  letter-spacing: 3px;
+  color: #ff7256;
+  margin: 5px 0 0 0;
+}
+
+.quickview-text-description {
+  font-family: baskerville, times, serif;
+  text-align: justify;
+  font-size: 17.5px;
+  letter-spacing: 1.2px;
+  line-height: 1.3;
+  margin: 35px 0;
+}
+
+.text-center {
+  text-align: center;
+}
+
+.footer {
+  background-image: url('../img/torquoise-bg.jpg');
+  background-size: cover;
+  height: 170px;
+}
+
+.footer-text {
+  font-family: 'Oswald', sans-serif;
+  font-size: 14px;
+  font-weight: bold;
+  text-transform: uppercase;
+  letter-spacing: 4px;
+  line-height: 1.8;
+  color: #fff;
+}
+
+.normal-weight {
+  font-weight: normal;
+}
+
+.home-content-container {
+  width: 100%;
+  height: 2200px;
+}
+
+.footer-content-container {
+  margin-top: 40px;
+}

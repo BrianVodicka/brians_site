@@ -1,0 +1,17 @@
+nav.navbar
+  div.row.col-md-12
+    img.header-img.centered(src='img/IMG_1086.JPG')
+  div.row.col-md-12
+    div.nav-container.centered
+      ul.nav.navbar-nav
+        li(ng-class='{active: page=="Home"}')
+          a.nav-menu-item.link-style(ng-click='homeClick()') BLOG
+        li(ng-class='{active: page=="About"}')
+          a.nav-menu-item.link-style(ng-click='aboutClick()') ABOUT
+        li(ng-class='{active: page=="Places"}')
+          a.nav-menu-item.link-style(ng-click='placesClick()') PLACES
+        li(ng-class='{active: page=="Contact"}')
+          a.nav-menu-item.link-style(ng-click='contactClick()') CONTACT
+.container-fluid
+  .row
+    block contents

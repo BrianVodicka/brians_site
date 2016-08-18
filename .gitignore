@@ -1,0 +1,9 @@
+*DS_Store
+*.pem
+*.swp
+tmp/
+/data/
+/public/img/
+node_modules/
+config.js
+passport.js
