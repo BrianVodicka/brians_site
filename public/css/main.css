@@ -1,12 +1,12 @@
 * {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 html {
-  background: #eee;
+  background: #000;
 }
 
-p, div, html, body {
+p, h1, div, html, body {
   font-family: 'Oswald', sans-serif;
 }
 
@@ -14,169 +14,80 @@ body {
   background-image: url('../img/tile-paper.jpg');
 }
 
-.navbar {
-  height: 200px;
-}
-
-.nav-container {
-  width: 440px;
-}
-
-.nav-menu-item {
-  font-family: 'Oswald', sans-serif;
-  font-size: 15px;
-  font-weight: bold;
-  text-transform: uppercase;
-  color: rgb(255, 114, 86);
-  letter-spacing: 3px;
-}
-
-.header-img {
-  width: 250px;
-  height: 85px;
-  
-}
-
-.unpadded {
-  padding: 0;
-}
-
-.nomargin {
-  margin: 0;
-}
-
-.fullwidth {
-  width: 100%;
-}
-
-.main-img {
-  width: 100%;
-  height: auto;
-}
-
-.break-area {
-  margin-top: 15px;
-  height: 50px;
-}
-
-.zigzag-break {
-  background-image: url('../img/tile-white-zig-zag.png');
-  background-repeat: repeat-x;
-  width: 100%;
-  height: 33px;
-}
-
-.red-break {
-  background-image: url('../img/red-bg.jpg');
-  width: 100%;
-  height: 180px;
-}
-
-.centered {
-  display: block;
-  margin: 0 auto;
-}
-
-.whats-new-holder {
-  width: 309px;
-  margin-top: 40px;
-}
-
-.quickview-container {
-  width: 974px;
-  height: 400px;
-  padding: 0;
-  margin: 45px auto;
-}
-
-.quickview-img-container {
-  width: 600px;
-  height: 400px;
-  display: block;
+.fullscreen {
   position: absolute;
-  margin: 0;
+  top: 0;
+  right: 0;
+  bottom: 0;
+  left: 0;
 }
 
-.quickview-img {
+.fullsize {
+  position: absolute;
   width: 100%;
   height: 100%;
 }
 
-.quickview-text-container {
-  display: block;
-  top: 32px;
-  width: 477px;
-  height: 335px;
-  padding: 25px 45px;
-  background: #fff;
-  z-index: 1990;
-  position: relative;
-}
-
-.quickview-right-text {
-  left: 495px;
-}
-
-.quickview-right-image {
-  left: 520px;
-}
-
-
-.quickview-text-date {
-  font-family: 'Oswald', sans-serif;
-  font-size: 12px;
-  font-weight: bold;
-  color: #847777;
-  margin: 15px 0 0 0;
-}
-
-.quickview-text-title {
-  font-family: 'Oswald', sans-serif;
-  font-size: 18px;
-  font-weight: bold;
-  letter-spacing: 3px;
-  color: #ff7256;
-  margin: 5px 0 0 0;
-}
-
-.quickview-text-description {
-  font-family: baskerville, times, serif;
-  text-align: justify;
-  font-size: 17.5px;
-  letter-spacing: 1.2px;
-  line-height: 1.3;
-  margin: 35px 0;
-}
-
-.text-center {
-  text-align: center;
-}
-
-.footer {
-  background-image: url('../img/torquoise-bg.jpg');
+.picture-box-img {
   background-size: cover;
-  height: 170px;
+  background-repeat: no-repeat;
+  z-index: -1;
+  opacity: .5;
+  transition: opacity .5s;
 }
 
-.footer-text {
-  font-family: 'Oswald', sans-serif;
-  font-size: 14px;
-  font-weight: bold;
-  text-transform: uppercase;
-  letter-spacing: 4px;
-  line-height: 1.8;
+.half-height {
+  height: 50%;
+}
+
+.picture-box {
+  height: 100%;
+  cursor: pointer;
+  background-size: cover;
+  background-repeat: no-repeat;
+  padding: 0;
+}
+
+/*.unfocused:hover {
+  opacity: .75;
+  transtion: opacity .5s;
+}*/
+
+.picture-box:hover .picture-box-img {
+  opacity: .85;
+  transition: opacity .5s;
+}
+
+.picture-box:hover .centered-text {
+  opacity: 1;
+  transition: opacity .5s;
+}
+
+
+.focused {
+  opacity: 1;
+}
+
+.centered {
+  margin: 0 auto;
+}
+
+.centered-text {
+  text-align: center;
+  opacity: .8;
+  transition: opacity .5s;
+}
+
+.main-text {
   color: #fff;
+  font-weight: bold;
+  font-size: 50px;
+  margin-top: 25%;
 }
 
-.normal-weight {
-  font-weight: normal;
-}
-
-.home-content-container {
-  width: 100%;
-  height: 2200px;
-}
-
-.footer-content-container {
-  margin-top: 40px;
+.item-text {
+  color: #fff;
+  font-weight: bold;
+  font-size: 30px;
+  margin-top: 35%;
 }

@@ -8,7 +8,7 @@ var passport = require('passport');
 var bodyParser = require('body-parser')
 var config = require('./config/config');
 
-var PORT = 3001;
+var PORT = 3002;
 
 app.set('views', 'app/views');
 app.set('view engine', 'pug');

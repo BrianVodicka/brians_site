@@ -1,43 +1,31 @@
-div(ng-include="'partials/header'")
 block contents
-  div.home-content-container
-    div.row
-      div.col-md-12.unpadded.nomargin
-        img.main-img(src='img/IMG_1086.JPG')
-    div.row
-      div.col-md-12.break-area.zigzag-break
-    div.row
-      div.col-md-12
-        p About me!
-    div.row
-      div.col-md-12.break-area.red-break
-        div.centered.whats-new-holder
-          img.fullwidth(src='img/whats-new.png')
-    div.row.col-md-12
-      div.centered.quickview-container
-        div.quickview-img-container
-          img.quickview-img(src='img/IMG_1086.JPG')
-        div.quickview-text-container.quickview-right-text
-          div.row
-            p.text-center.quickview-text-date 8.10.16
-          div.row
-            p.text-center.quickview-text-title ROCKS AND MORE ROCKS
-          div.row
-            p.quickview-text.quickview-text-description There were so many rocks in the Grand tetons! I couldnt handle it. We hiked for miles... There were so many rocks in the Grand tetons! I couldnt handle it. We hiked for miles...
-
-          div.row
-            p.text-center Read More
-    div.row.col-md-12
-      div.centered.quickview-container
-        div.quickview-img-container.quickview-right-image
-          img.quickview-img(src='img/IMG_1086.JPG')
-        div.quickview-text-container
-          div.row
-            p.text-center.quickview-text-date 8.10.16
-          div.row
-            p.text-center.quickview-text-title ROCKS AND MORE ROCKS
-          div.row
-            p.quickview-text.quickview-text-description There were so many rocks in the Grand tetons! I couldnt handle it. We hiked for miles...
-          div.row
-            p.text-center Read More
-  div(ng-include="'partials/footer'")  
+  div.fullscreen
+    div.row.half-height
+      div.col-md-4.picture-box.unfocused(ng-click='aboutClicked = !aboutClicked', ng-class='{unfocused: !aboutClicked, focused: aboutClicked}')
+        div.fullsize.picture-box-img(style='background-image:url("img/IMG_0933_1.jpg")')
+        p.centered.centered-text.item-text ABOUT
+        p.centered.detailed-text(ng-if='aboutClicked') PPut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself hereut the details about myself here
+      div.col-md-4.picture-box.unfocused 
+        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
+        h1.centered.centered-text.main-text BRIAN<br>VODICKA 
+      div.col-md-4.picture-box.unfocused
+        div.fullsize.picture-box-img(style='background-image:url("img/snow.jpg")')
+        p.centered.centered-text.item-text RESUME
+    div.row.half-height
+      div.col-md-4.picture-box(ng-click='hobbiesClicked = !hobbiesClicked')
+        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
+        p.centered.centered-text.item-text HOBBIES
+        p.centered.detailed-text(ng-if='hobbiesClicked') Put the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself here 
+      div.col-md-4.picture-box(ng-click='skillsClicked = !skillsClicked')
+        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
+        p.centered.centered-text.item-text SKILLS
+        ul.centered.skills-list(ng-if='skillsClicked')
+          li SKILL A
+          li SKILL A
+          li SKILL A
+          li SKILL A
+          li SKILL A
+      div.col-md-4.picture-box
+        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
+        p.centered.centered-text.item-text CONTACT
+        
