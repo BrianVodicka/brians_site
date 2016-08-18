@@ -1,5 +1,5 @@
 * {
-  /*border: 1px solid red;*/
+  border: 1px solid red;
 }
 
 html {
@@ -28,11 +28,15 @@ body {
   height: 100%;
 }
 
+.nomargin {
+  margin: 0;
+}
+
 .picture-box-img {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -1;
-  opacity: .5;
+  opacity: .4;
   transition: opacity .5s;
 }
 
@@ -46,6 +50,7 @@ body {
   background-size: cover;
   background-repeat: no-repeat;
   padding: 0;
+  overflow: hidden;
 }
 
 /*.unfocused:hover {
@@ -53,19 +58,29 @@ body {
   transtion: opacity .5s;
 }*/
 
-.picture-box:hover .picture-box-img {
+.unfocused:hover .picture-box-img {
   opacity: .85;
   transition: opacity .5s;
 }
 
-.picture-box:hover .centered-text {
+.unfocused:hover .centered-text {
   opacity: 1;
   transition: opacity .5s;
 }
 
 
 .focused {
-  opacity: 1;
+  opacity: 1 !important;
+}
+
+.focused .picture-box-img {
+  opacity: .3;
+  transition: opacity .5s;
+}
+
+.focused .item-text {
+  margin-top: 5%;
+  transition: margin .5s;
 }
 
 .centered {
@@ -90,4 +105,15 @@ body {
   font-weight: bold;
   font-size: 30px;
   margin-top: 35%;
+  transition: margin 1s;
+}
+
+.detailed-text {
+  left: 10px;
+  margin: 10px auto;
+  padding: 30px;
+  width: 85%;
+  text-align: justified;
+  color: #fff;
+  opacity: .8;
 }

@@ -1,7 +1,7 @@
 block contents
   div.fullscreen
-    div.row.half-height
-      div.col-md-4.picture-box.unfocused(ng-click='aboutClicked = !aboutClicked', ng-class='{unfocused: !aboutClicked, focused: aboutClicked}')
+    div.row.half-height.nomargin
+      div.col-md-4.picture-box(ng-click='aboutClicked = !aboutClicked', ng-class='{unfocused: !aboutClicked, focused: aboutClicked}')
         div.fullsize.picture-box-img(style='background-image:url("img/IMG_0933_1.jpg")')
         p.centered.centered-text.item-text ABOUT
         p.centered.detailed-text(ng-if='aboutClicked') PPut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself hereut the details about myself here
@@ -11,7 +11,7 @@ block contents
       div.col-md-4.picture-box.unfocused
         div.fullsize.picture-box-img(style='background-image:url("img/snow.jpg")')
         p.centered.centered-text.item-text RESUME
-    div.row.half-height
+    div.row.half-height.nomargin
       div.col-md-4.picture-box(ng-click='hobbiesClicked = !hobbiesClicked')
         div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
         p.centered.centered-text.item-text HOBBIES
