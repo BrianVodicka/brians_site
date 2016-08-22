@@ -10,12 +10,31 @@ var HomeCtrl = function($scope, $resource) {
     update: {method: 'POST'}
   });
 
+  $scope.contactInputValid = function() {
+    return $scope.contactName != null &&
+      $scope.contactEmail != null &&
+      $scope.contactMessage != null;
+  }
+  
+  $scope.clearContactInput = function() {
+    $scope.contactName = null;
+    $scope.contactEmail = null;
+    $scope.contactMessage = null;
+    $scope.contactClicked = false;
+  }
+
   $scope.sendContactMessage = function() {
+    if (!$scope.contactInputValid()) {
+      $scope.shouldShowError = true;
+      return;
+    }
     Contact.update({name: $scope.contactName, email: $scope.contactEmail, message: $scope.contactMessage}, function(data) {
       if (data.error) {
-        console.log('error');
-        $scope.shouldShowContactError = true;
+        $scope.clearContactInput();
         return;
+      } else {
+        $scope.shouldShowError = false;
+        $scope.clearContactInput();
       }
     });
   }

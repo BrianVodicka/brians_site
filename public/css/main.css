@@ -197,3 +197,18 @@ body {
   opacity: .9;
   border: none;
 }
+
+.contact-err-msg-container {
+  height: 35px !important;
+  margin-left: 10px;
+  background: #222;
+  display: inline;
+  padding: 6px;
+  border-radius: 4px;
+}
+
+.contact-err-msg {
+  top: 5px;
+  margin: 5px;
+  color: #fff;
+}
