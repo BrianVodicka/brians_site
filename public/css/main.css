@@ -1,5 +1,5 @@
 * {
-  border: 1px solid red;
+  /*border: 1px solid red;*/
 }
 
 html {
@@ -8,6 +8,10 @@ html {
 
 p, h1, div, html, body {
   font-family: 'Oswald', sans-serif;
+}
+
+ul {
+  padding: 5px 0 5px 15px;
 }
 
 
@@ -31,6 +35,18 @@ body {
 
 .nomargin {
   margin: 0;
+}
+
+.unpadded {
+  padding: 0;
+}
+
+.inline {
+  display: inline block;
+}
+
+.container {
+  height: 100%;
 }
 
 .picture-box-img {
@@ -120,7 +136,15 @@ body {
 .detailed-text {
   margin: 10px auto;
   padding: 30px;
-  width: 85%;
+  width: 80%;
+  text-align: justified;
+  color: #fff;
+}
+
+.text-container {
+  margin: 10px auto;
+  padding: 15px;
+  width: 80%;
   text-align: justified;
   color: #fff;
 }
@@ -133,7 +157,7 @@ body {
   background: #222;
   opacity: .8;
   margin: 10px auto;
-  height: 200px;
+  height: 245px;
 }
 
 .contact-container {
@@ -165,4 +189,3 @@ body {
   opacity: .9;
   border: none;
 }
-

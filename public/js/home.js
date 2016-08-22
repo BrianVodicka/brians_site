@@ -20,6 +20,10 @@ var HomeCtrl = function($scope, $resource) {
     });
   }
 
+  $scope.openResume = function() {
+    window.open("img/resume.pdf", "_blank");
+  }
+
   /*$('.picture-box').click(function() {
     $('.picture-box').child('.fade-in')
   });*/
