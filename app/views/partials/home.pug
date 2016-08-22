@@ -32,8 +32,8 @@ block contents
         div.fullsize.picture-box-img(style='background-image:url("img/geom-mountain-green.jpg")')
         p.centered.item-text CONTACT
         div.contact-container(ng-if='contactClicked')
-          input.form-control.contact-item(ng-model='contactName', placeholder='Name')
-          input.form-control.contact-item(ng-model='contactEmail', placeholder='Email')
-          textarea.form-control.contact-text(ng-model='contactMessage', placeholder='Message')
+          input.form-control.contact-item(ng-model='$parent.contactName', placeholder='Name')
+          input.form-control.contact-item(ng-model='$parent.contactEmail', placeholder='Email')
+          textarea.form-control.contact-text(ng-model='$parent.contactMessage', placeholder='Message')
           button.btn.btn-primary.submit-btn(ng-click='sendContactMessage()') Send
 

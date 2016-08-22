@@ -21,7 +21,6 @@ var ContactSchema = mongoose.Schema({
 });
 
 ContactSchema.statics.newMessage = function(name, email, message, done) {
-  console.log('here');
   Contact.create({
     name: name,
     email: email,

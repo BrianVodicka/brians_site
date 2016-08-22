@@ -5,13 +5,11 @@ var Contact = mongoose.model('Contact');
 module.exports = function(app) {
 
   app.get("/home", function(req, res) {
-    console.log('hello??');
     res.render("controllerapp");
   });
   
   app.get("/partials/:name",
     function(req, res) {
-      console.log('app get partials/name');
       var name = req.params.name;
       res.render('partials/' + name);
   });

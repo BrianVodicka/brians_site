@@ -29,7 +29,7 @@ app.use(function(req, res, next) {
 require('./routes/page')(app);
 
 /* Require models */
-require('./app/models/entry');
+require('./app/models/contact');
 
 /* Establish Mongoose connection */
 mongoose.connect('mongodb://localhost/brianvdb3');

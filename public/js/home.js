@@ -12,12 +12,11 @@ var HomeCtrl = function($scope, $resource) {
 
   $scope.sendContactMessage = function() {
     Contact.update({name: $scope.contactName, email: $scope.contactEmail, message: $scope.contactMessage}, function(data) {
-      /*console.log('here');
       if (data.error) {
         console.log('error');
         $scope.shouldShowContactError = true;
         return;
-      }*/
+      }
     });
   }
 
