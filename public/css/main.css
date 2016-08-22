@@ -49,11 +49,11 @@ body {
   height: 100%;
 }
 
-.picture-box-img {
+.picture-box-img, .main-picture-img {
   background-size: cover;
   background-repeat: no-repeat;
   z-index: -2;
-  opacity: .55;
+  opacity: .5;
   transition: opacity .5s;
 }
 
@@ -75,10 +75,18 @@ body {
   transtion: opacity .5s;
 }*/
 
+
+
 .unfocused:hover .picture-box-img {
-  opacity: .85;
+  opacity: .95;
   transition: opacity .5s;
 }
+
+.unfocused:hover .main-picture-img {
+  opacity: .80;
+  transition: opacity .5s;
+}
+
 
 .unfocused:hover .centered-text {
   opacity: 1;
@@ -90,7 +98,7 @@ body {
   opacity: 1 !important;
 }
 
-.focused .picture-box-img {
+.focused .picture-box-img, .focused .main-picture-img {
   opacity: .8;
   transition: opacity .5s;
 }
