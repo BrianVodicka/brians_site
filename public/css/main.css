@@ -205,10 +205,9 @@ body {
   display: inline;
   padding: 6px;
   border-radius: 4px;
+  opacity: .9;
 }
 
 .contact-err-msg {
-  top: 5px;
-  margin: 5px;
   color: #fff;
 }

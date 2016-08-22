@@ -31,7 +31,7 @@ block contents
           div.row.nomargin
             button.btn.btn-primary.submit-btn.col-md-2(ng-click='sendContactMessage()') Send
             div.col-md-7.contact-err-msg-container(ng-if='shouldShowError && !contactInputValid()')
-              strong.contact-err-msg Please fill all forms
+              p.contact-err-msg Please fill all forms
       div.col-md-4.picture-box(ng-class='{unfocused: !resumeClicked, focused: resumeClicked}', ng-click='openResume()')
         div.fullsize.picture-box-img(style='background-image:url("img/geom-mountain-blue.jpg")')
         p.centered.item-text RESUME
