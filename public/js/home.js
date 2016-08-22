@@ -6,6 +6,25 @@ var HomeCtrl = function($scope, $resource) {
   var hobbiesClicked = false;
   var skillsClicked = false;
 
+  var Contact = $resource('/api/send_contact', {}, {
+    update: {method: 'POST'}
+  });
+
+  $scope.sendContactMessage = function() {
+    Contact.update({name: $scope.contactName, email: $scope.contactEmail, message: $scope.contactMessage}, function(data) {
+      /*console.log('here');
+      if (data.error) {
+        console.log('error');
+        $scope.shouldShowContactError = true;
+        return;
+      }*/
+    });
+  }
+
+  /*$('.picture-box').click(function() {
+    $('.picture-box').child('.fade-in')
+  });*/
+
 }
 
 controllerCode.controller('HomeCtrl', [

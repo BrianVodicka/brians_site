@@ -4,9 +4,8 @@ var https = require('https');
 var http = require('http');
 var path = require('path');
 var app = express();
-var passport = require('passport');
 var bodyParser = require('body-parser')
-var config = require('./config/config');
+var Contact = require('./app/models/contact');
 
 var PORT = 3002;
 
@@ -16,10 +15,6 @@ app.set('view engine', 'pug');
 app.use(express.static(path.join(__dirname + '/public')));
 app.use(bodyParser.json());
 app.use(bodyParser.urlencoded({extended: false}))
-
-/* Passport configuration */
-app.use(passport.initialize());
-require('./config/passport')(passport, config);
 
 app.use(function(req, res, next) {
   res.setHeader('Access-Control-Allow-Origin', '*');
@@ -31,19 +26,17 @@ app.use(function(req, res, next) {
 // app.use(morgan('dev'));
 
 /* Require routes */
-require('./routes/page')(app, passport);
-require('./routes/api')(app, passport);
-//require('./routes/auth')(app, passport);
+require('./routes/page')(app);
 
 /* Require models */
 require('./app/models/entry');
 
 /* Establish Mongoose connection */
-mongoose.connect('mongodb://localhost/bethanyDB');
+mongoose.connect('mongodb://localhost/brianvdb3');
 mongoose.connection.on('open', function() {
   
   console.log('mongoose connection established');
-
+  
   http.createServer(app).listen(PORT, function() {
     console.log('https server running on ' + PORT);
   });

@@ -2,30 +2,38 @@ block contents
   div.fullscreen
     div.row.half-height.nomargin
       div.col-md-4.picture-box(ng-click='aboutClicked = !aboutClicked', ng-class='{unfocused: !aboutClicked, focused: aboutClicked}')
-        div.fullsize.picture-box-img(style='background-image:url("img/IMG_0933_1.jpg")')
-        p.centered.centered-text.item-text ABOUT
-        p.centered.detailed-text(ng-if='aboutClicked') PPut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself hereut the details about myself here
+        div.fullsize.picture-box-img(style='background-image:url("img/hiking_2_2.jpg")')
+        p.centered.item-text ABOUT
+        div.text-background(ng-if='aboutClicked')
+        p.centered.detailed-text(ng-if='aboutClicked') I'm Brian, a Senior at the University of Texas studying CS, Math, and Latin. As a proud nerd, I like to solve challenging problems - preferably with computers. My favorite ares of CS are algorithms and analytics. I'm 21 years old and have worked in healthcare analytics for three years at Accordion. 
       div.col-md-4.picture-box.unfocused 
-        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
+        div.fullsize.picture-box-img(style='background-image:url("img/geom-mountain-blue.jpg")')
         h1.centered.centered-text.main-text BRIAN<br>VODICKA 
-      div.col-md-4.picture-box.unfocused
-        div.fullsize.picture-box-img(style='background-image:url("img/snow.jpg")')
-        p.centered.centered-text.item-text RESUME
+      div.col-md-4.picture-box(ng-click='window.open("img/resume.pdf", "_blank")', ng-class='{unfocused: !resumeClicked, focused: resumeClicked}')
+        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
+        p.centered.item-text RESUME
     div.row.half-height.nomargin
-      div.col-md-4.picture-box(ng-click='hobbiesClicked = !hobbiesClicked')
-        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
-        p.centered.centered-text.item-text HOBBIES
-        p.centered.detailed-text(ng-if='hobbiesClicked') Put the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself herePut the details about myself here 
-      div.col-md-4.picture-box(ng-click='skillsClicked = !skillsClicked')
-        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
-        p.centered.centered-text.item-text SKILLS
+      div.col-md-4.picture-box(ng-click='hobbiesClicked = !hobbiesClicked', ng-class='{unfocused: !hobbiesClicked, focused: hobbiesClicked}')
+        div.fullsize.picture-box-img(style='background-image:url("img/geom-mountain-red.jpg")')
+        p.centered.item-text HOBBIES
+        div.text-background(ng-if='hobbiesClicked')
+        p.centered.detailed-text(ng-if='hobbiesClicked') I enjoy spending my free time coding or playing sports. I'm a member of the Floppy Disks - the honors computer science ultimate frisbee team, and also enjoy tennis and golf. And as Classics student, I enjoy trying new projects that bridge the gap between technology and the ancient world
+      div.col-md-4.picture-box(ng-click='skillsClicked = !skillsClicked', ng-class='{unfocused: !skillsClickedClicked, focused: skillsClicked}')
+        div.fullsize.picture-box-img(style='background-image:url("img/snow.jpg")')
+        p.centered.item-text SKILLS
+        div.text-background(ng-if='skillsClicked')
         ul.centered.skills-list(ng-if='skillsClicked')
           li SKILL A
           li SKILL A
           li SKILL A
           li SKILL A
           li SKILL A
-      div.col-md-4.picture-box
-        div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
-        p.centered.centered-text.item-text CONTACT
-        
+      div.col-md-4.picture-box(ng-click='contactClicked = true', ng-class='{unfocused: !hobbiesClicked, focused: hobbiesClicked}')
+        div.fullsize.picture-box-img(style='background-image:url("img/geom-mountain-green.jpg")')
+        p.centered.item-text CONTACT
+        div.contact-container(ng-if='contactClicked')
+          input.form-control.contact-item(ng-model='contactName', placeholder='Name')
+          input.form-control.contact-item(ng-model='contactEmail', placeholder='Email')
+          textarea.form-control.contact-text(ng-model='contactMessage', placeholder='Message')
+          button.btn.btn-primary.submit-btn(ng-click='sendContactMessage()') Send
+

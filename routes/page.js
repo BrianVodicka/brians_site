@@ -1,8 +1,8 @@
-module.exports = function(app, passport) {
+var mongoose = require('mongoose');
+var async = require('async');
+var Contact = mongoose.model('Contact');
 
-  var loggedIn = passport.authenticate('bearer', {session: false,
-    failureRedirect: '/home'});
-  // var loggedIn = passport.authenticate('bearer', {session: false});
+module.exports = function(app) {
 
   app.get("/home", function(req, res) {
     console.log('hello??');
@@ -15,6 +15,18 @@ module.exports = function(app, passport) {
       var name = req.params.name;
       res.render('partials/' + name);
   });
+
+  app.post("/api/send_contact",
+    function(req,res) {
+      Contact.newMessage(req.body.name, req.body.email, req.body.message, function(err, user) {
+        if (err) {
+          res.json({'error': 'problem submitting message'});
+        } else {
+          res.json('success');
+        } 
+      });
+    }
+  );
 
   /*app.get("/chart/:project/:batch/:chartID",
     loggedIn,

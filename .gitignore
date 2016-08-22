@@ -3,6 +3,7 @@
 *.swp
 tmp/
 /data/
+/notes/
 /public/img/
 node_modules/
 config.js
