@@ -29,12 +29,9 @@ var HomeCtrl = function($scope, $resource) {
       return;
     }
     Contact.update({name: $scope.contactName, email: $scope.contactEmail, message: $scope.contactMessage}, function(data) {
-      if (data.error) {
-        $scope.clearContactInput();
-        return;
-      } else {
+      $scope.clearContactInput();
+      if (!data.error) {
         $scope.shouldShowError = false;
-        $scope.clearContactInput();
       }
     });
   }
@@ -43,10 +40,6 @@ var HomeCtrl = function($scope, $resource) {
     window.open("img/resume.pdf", "_blank");
   }
 
-  /*$('.picture-box').click(function() {
-    $('.picture-box').child('.fade-in')
-  });*/
-
 }
 
 controllerCode.controller('HomeCtrl', [
@@ -54,11 +47,3 @@ controllerCode.controller('HomeCtrl', [
   '$resource',
   HomeCtrl
   ]);
-
-/*angular.module('controllerApp').controller('HomeCtrl', [
-  '$scope',
-  '$resource',
-  function($scope, $resource) {
-  console.log('home');
-  
-}]);*/

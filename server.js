@@ -53,20 +53,16 @@ mongoose.connection.on('error', function(err) {
 
 // error handling
 app.use(function(err, req, res, next) {
-  console.log({error: err});
   res.status(err.status || 500);
   res.render('500', { error: err });
 });
 
 app.use(function(req, res, next){
-  console.log(req.url);
   if (req.accepts('html')) {
-    console.log(req.url);
     res.render('404', { url: req.url });
     return;
   }
   if (req.accepts('json')) {
-    console.log('Not found');
     res.send({ error: 'Not found' });
     return;
   }
