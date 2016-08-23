@@ -5,6 +5,7 @@ var Contact = mongoose.model('Contact');
 module.exports = function(app) {
 
   app.get("/home", function(req, res) {
+    console.log('visit home');
     res.render("controllerapp");
   });
   
@@ -31,6 +32,5 @@ module.exports = function(app) {
     console.log('app get /');
     res.redirect('/home');
   });
-
 
 }

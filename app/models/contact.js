@@ -26,9 +26,6 @@ ContactSchema.statics.newMessage = function(name, email, message, done) {
     email: email,
     message: message
   }, function(err, contact) {
-    console.log('created');
-    console.log(err);
-    console.log(contact);
     if (err) done(err);
     else done(null, contact);
   });
