@@ -1,12 +1,12 @@
 block contents
   div.fullscreen
     div.row.half-height.nomargin
-      div.col-md-4.picture-box.unfocused
+      div.col-md-4.picture-box.unfocused.hide-for-mobile
         div.fullsize.picture-box-img(style='background-image:url("img/hiking_2_2.jpg")')
       div.col-md-4.picture-box.unfocused
         div.fullsize.main-picture-img(style='background-image:url("img/geom-mountain-green.jpg")')
         h1.centered.centered-text.main-text BRIAN<br>VODICKA 
-      div.col-md-4.picture-box.unfocused
+      div.col-md-4.picture-box.unfocused.hide-for-mobile
         div.fullsize.picture-box-img(style='background-image:url("img/IMG_1046_4.jpg")')
     div.row.half-height.nomargin
       div.col-md-4.picture-box(ng-click='aboutClicked = !aboutClicked', ng-class='{unfocused: !aboutClicked, focused: aboutClicked}')
