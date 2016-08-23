@@ -57,11 +57,14 @@ body {
   transition: opacity .5s;
 }
 
-.half-height {
-  height: 50%;
+@media (min-width: 768px) {
+  .half-height {
+    height: 50%;
+  }
 }
 
 .picture-box {
+  min-height: 270px;
   height: 100%;
   cursor: pointer;
   background-size: cover;
