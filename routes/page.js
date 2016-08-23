@@ -16,6 +16,7 @@ module.exports = function(app) {
 
   app.post("/api/send_contact",
     function(req,res) {
+      console.log('new message: ' + req.body.name + ' ' + req.body.email + ' ' + req.body.message);
       Contact.newMessage(req.body.name, req.body.email, req.body.message, function(err, user) {
         if (err) {
           res.json({'error': 'problem submitting message'});
@@ -25,15 +26,6 @@ module.exports = function(app) {
       });
     }
   );
-
-  /*app.get("/chart/:project/:batch/:chartID",
-    loggedIn,
-    function(req, res) {
-      var project = req.params.project;
-      var batch = req.params.batch;
-      var chartID = req.params.chartID;
-      res.sendFile('data/'+project+'/'+batch+'/'+chartID+'.pdf', {root: '.'});
-  });*/
 
   app.get("/", function(req, res) {
     console.log('app get /');
