@@ -30,7 +30,7 @@ module.exports = function(app) {
 
   app.get("/", function(req, res) {
     console.log('app get /');
-    res.redirect('/home');
+    res.render("controllerapp");
   });
 
 }
