@@ -2,7 +2,6 @@ const mongoose = require('mongoose');
 const Shema = mongoose.Schema;
 
 const crypto = require('crypto');
-const bcrypt = require('bcrypt');
 const SALT_WORK_FACTOR = 11;
 
 const async = require('async');

@@ -7,7 +7,7 @@ var app = express();
 var bodyParser = require('body-parser')
 var Contact = require('./app/models/contact');
 
-var PORT = 3002;
+var PORT = 3030;
 
 app.set('views', 'app/views');
 app.set('view engine', 'pug');
