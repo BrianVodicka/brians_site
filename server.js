@@ -4,10 +4,9 @@ var https = require('https');
 var http = require('http');
 var path = require('path');
 var app = express();
-var bodyParser = require('body-parser')
-var Contact = require('./app/models/contact');
+var bodyParser = require('body-parser');
 
-var PORT = 3002;
+var PORT = 3030;
 
 app.set('views', 'app/views');
 app.set('view engine', 'pug');
@@ -25,11 +24,12 @@ app.use(function(req, res, next) {
 /* Logging */
 // app.use(morgan('dev'));
 
+/* Require models */
+require('./app/models/contact');
+
 /* Require routes */
 require('./routes/page')(app);
 
-/* Require models */
-require('./app/models/contact');
 
 /* Establish Mongoose connection */
 mongoose.connect('mongodb://localhost/brianvdb3');

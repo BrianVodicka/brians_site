@@ -6,11 +6,11 @@ var controllerApp = angular.module('controllerApp', [
 
 controllerApp.config(['$routeProvider', function($routeProvider) {
   $routeProvider
-    .when('/home', {
+    .when('/', {
       templateUrl: 'partials/home',
       controller: 'HomeCtrl'
     })
     .otherwise({
-      redirectTo: '/home'
+      redirectTo: '/'
     });
 }]);
