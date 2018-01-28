@@ -13,14 +13,12 @@ block contents
         div.fullsize.picture-box-img(style='background-image:url("img/geom-mountain-red.jpg")')
         p.centered.item-text ABOUT
         div.text-background(ng-if='aboutClicked')
-        p.centered.detailed-text(ng-if='aboutClicked') Hi! I'm Brian, and right now I'm a software engineer intern at Apple. Before Apple, I worked for three years at Accordion, a machine learning startup in Austin. I'm looking for full time opportunities in roles as a data scientist, data engineer, or backend engineer.
- 
+        p.centered.detailed-text(ng-if='aboutClicked') Hi! I'm Brian, and I'm a software engineer at Bloomberg working on backend development in python and c++. Contact me for any questions - my info can be found in my resume
       //div.col-md-4.picture-box(ng-click='hobbiesClicked = !hobbiesClicked', ng-class='{unfocused: !hobbiesClicked, focused: hobbiesClicked}')
         div.fullsize.picture-box-img(style='background-image:url("img/snow_2.jpg")')
         p.centered.item-text HOBBIES
         div.text-background(ng-if='hobbiesClicked')
-        p.centered.detailed-text(ng-if='hobbiesClicked') I enjoy spending my free time coding or playing sports. I'm a member of the Floppy Disks - the honors computer science ultimate frisbee team, and also enjoy tennis and golf. And as Classics student, I enjoy trying new projects that bridge the gap between technology and the ancient world
-    
+        p.centered.detailed-text(ng-if='hobbiesClicked')     
       div.col-md-4.picture-box(ng-click='contactClicked = true', ng-class='{unfocused: !hobbiesClicked, focused: hobbiesClicked}') 
         div.fullsize.picture-box-img(style='background-image:url("img/snow.jpg")')
         p.centered.item-text CONTACT
